@@ -1,13 +1,13 @@
 # 📚 Blog Post Panel
 
-A Blog Post Panel application where users can register, log in, and manage their blogs. The application allows authenticated users to create, edit, delete, and view blogs. It also includes features like image uploads and user-specific controls. Built using EJS, Express.js, MongoDB, Passport.js, and Multer.
+A Blog Post Panel application where users can register, log in, and manage their blogs. The application allows authenticated users to create, edit, delete, and view blogs. It also includes features like image uploads and user-specific controls. They are built using EJS, Express.js, MongoDB, Passport.js, and Multer.
 
 ## ✨ Features
 
 - 🔐 **User Authentication**: Secure login and registration using Passport.js.
-- ✍️ **Blog Management**: Users can create, update, and delete their own blogs.
+- ✍️ **Blog Management**: Users can create, update, and delete their blogs.
 - 🖼️ **Image Uploads**: Upload images with blogs using Multer.
-- 🔒 **User-Specific Controls**: Users can manage only their own blogs.
+- 🔒 **User-Specific Controls**: Users can manage only their blogs.
 - 💻 **Responsive UI**: Custom CSS for a modern, animated, and visually appealing design.
 - 📧 **Forgot Password**: Reset password using OTP and update functionality.
 
@@ -23,7 +23,7 @@ A Blog Post Panel application where users can register, log in, and manage their
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/blog-post-panel.git
+   git clone https://github.com/jencyy/BlogPanel.git
    cd blog-post-panel
 
   ``
@@ -40,10 +40,14 @@ npm start
 
 ## 🚀 Usage
 📝 Register a new user account.
+
 🔑 Log in with your credentials.
+
 ✍️ Create, edit, or delete blog posts.
+
 🖼️ Upload images to enhance blog posts.
-👀 View all available blogs, with edit and delete options available only for your own blogs.
+
+👀 View all available blogs, with only edit and delete options available for your blogs.
 
 📸 Screenshots
 
