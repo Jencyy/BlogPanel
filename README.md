@@ -26,7 +26,6 @@ A Blog Post Panel application where users can register, log in, and manage their
    git clone https://github.com/jencyy/BlogPanel.git
    cd blog-post-panel
 
-  ``
 2. Install the required dependencies:
 ```bash
 npm install
