@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Blogs</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 2rem;
+        }
+
+        /* Container for the blog list */
+        .blogs-list {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .blog-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* Blog Card Styles */
+        .blog-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 5px solid #6c63ff;
+        }
+
+        .blog-content {
+            padding: 15px;
+        }
+
+        .blog-content h3 {
+            font-size: 1.5rem;
+            color: #6c63ff;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .blog-content p {
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        /* Action Buttons (Edit/Delete) */
+        .blog-actions {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .btn-edit, .btn-delete {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            color: white;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            width: 45%;
+            text-decoration: none;
+        }
+
+        .btn-edit {
+            background-color: #6c63ff; /* Green for edit */
+        }
+
+        .btn-edit:hover {
+            background-color: #218838;
+        }
+
+        .btn-delete {
+            background-color: #6c63ff; /* Red for delete */
+        }
+
+        .btn-delete:hover {
+            background-color: #c82333;
+        }
+
+        /* Mobile Friendly Adjustments */
+        @media (max-width: 600px) {
+            .blogs-list {
+                padding: 10px;
+            }
+
+            .blog-actions {
+                flex-direction: column;
+            }
+
+            .btn-edit, .btn-delete {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <%- include('../particals/header.ejs') %> <!-- Include header -->
+
+    <div class="blogs-list">
+        <h2>All Blogs</h2>
+        <div class="blog-cards">
+            <% blogs.forEach(blog => { %>
+                <div class="blog-card">
+                    <img src="/upload/<%= blog.image %>" alt="Blog Image" class="blog-image">
+                    <div class="blog-content">
+                        <h3><%= blog.title %></h3>
+                        <p><%= blog.content.substring(0, 100) %>...</p>
+                       
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+
+    <%- include('../particals/footer.ejs') %> <!-- Include footer -->
+
+</body>
+</html>
