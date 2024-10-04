@@ -52,6 +52,6 @@ npm start
 
 ![Screenshot 2024-10-04 162705](https://github.com/user-attachments/assets/68a6ef4f-b36b-4f71-b93d-d6adc71e64c2)
 
-add blog
+
 ![Screenshot 2024-10-04 162847](https://github.com/user-attachments/assets/3e7d96a8-044e-426f-b0ab-b608d9d8c521)
 
